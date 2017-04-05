@@ -217,9 +217,7 @@
     	<!-- second dataset separated distros class-->
     	<!-- Dataset class -->
     	<dcatapit:Dataset rdf:about="#datasetitem2">
-    	    	<rdf:type rdf:resource="dcat:Dataset"/>
-		<rdf:type rdf:resource="dcatapip:Dataset"/>
-		<dct:title type="xsd:string">myseconddataset</dct:title>
+    	    	<dct:title type="xsd:string">myseconddataset</dct:title>
     	    	<dct:description>ciao</dct:description>
     		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
     		<dct:identifier>999</dct:identifier>
