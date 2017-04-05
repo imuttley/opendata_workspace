@@ -8,6 +8,7 @@
 <!-- vocabulary http://joinup.ec.europa.eu/site/core_vocabularies/registry/dcat-ap/ -->
 <!--  -->
 <!-- DCAT_AP-it vocabulary http://www.dati.gov.it/onto/DCAT-AP_IT.owl --> 
+<!-- bug? namespace dcatapit link to http(s ?)://dati.gov.it/onto/dcatapit instead http://dati.gov.it/onto/dcatapit -->
 <!-- -->
 
 <!-- standard namespaces declaration -->
