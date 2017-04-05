@@ -2,9 +2,18 @@
 
 <!-- monolithic Cataolg skeleton for DCAP_AP-it with Dataset and Distribution -->
 
+<!-- DCAT base vocabulary https://www.w3.org/TR/vocab-dcat/ -->
+<!-- -->
+<!-- DCAT_AP SC118DI07171 DCAT Application Profile for data portals in Europe version 1.1 -->
+<!-- vocabulary http://joinup.ec.europa.eu/site/core_vocabularies/registry/dcat-ap/ -->
+<!--  -->
+<!-- DCAT_AP-it vocabulary http://www.dati.gov.it/onto/DCAT-AP_IT.owl --> 
+<!-- -->
+
 <!-- standard namespaces declaration -->
 <rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" 
-    	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    	xmlns:dcatit="http://dati.gov.it/onto/dcatapit#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     	xmlns:skos="http://wwww.w3.org/2004/02/skos/core#"
     	xmlns:dc="http://purl.org/dc/elements/1.1/"
