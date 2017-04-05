@@ -1,11 +1,15 @@
 <?xml version="1.0"?>
+
+<!-- monolithic Cataolg skeleton for DCAP_AP-it with Dataset and Distribution -->
+
+<!-- standard namespaces declaration -->
 <rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" 
     	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     	xmlns:skos="http://wwww.w3.org/2004/02/skos/core#"
     	xmlns:dc="http://purl.org/dc/elements/1.1/"
     	xmlns:ex="http://example.org/stuff/1.0/"
-		xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dct="http://purl.org/dc/terms/"
     	xmlns:foaf="http://xmlns.com/foaf/0.1/"
     	xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     	xmlns:adms="http://www.w3.org/ns/adms#"
@@ -14,36 +18,41 @@
     	xmlns:locn="http://www.w3.org/ns/locn#"
     	xmlns:owl="http://www.w3.org/2002/07/owl#">
     	
+	<!-- Catalog class -->
     	<dcat:Catalog rdf:about="#myfirstcatalog">
-    	    <!-- equivalet to -->
-    	    <!-- <rdf:Description rdf:about="#myfirstcatalog"> -->
-    	    <!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> --> 
-			<!-- or -->
-			<!-- <rdf:Description rdf:ID="myfirstcatalog"> -->
-			<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> -->
+		<!-- equivalet to -->
+		<!-- <rdf:Description rdf:about="#myfirstcatalog"> -->
+		<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> --> 
+		<!-- or -->
+		<!-- <rdf:Description rdf:ID="myfirstcatalog"> -->
+		<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> -->
     	    <dcat:contactPoint rdf:resource="#me"></dcat:contactPoint> 
     	    <dct:language>en-EN</dct:language>
     		<dct:license>CC 4.0</dct:license>
     		<dcat:themeTaxonomy>
     			<skos:ConceptScheme />
     		</dcat:themeTaxonomy>
-    		<!-- DCAT_AP specs -->
+    		
+		<!-- DCAT_AP specs -->
     		<dct:title>myfirstdata</dct:title>
     		<dct:publisher rdf:resource="#mydatapublisher"></dct:publisher>
     		<dct:description>ciao</dct:description> 	
     		<dcat:dataset rdf:resource="#datasetitem1"></dcat:dataset>
     		<dcat:dataset rdf:resource="#datasetitem2"></dcat:dataset>
     		<!-- <dcat:dataset rdf:resource="#datasetitem3"></dcat:dataset> -->
-    		<!-- DCAT_AP-it specs -->
+    		
+		<!-- DCAT_AP-it specs -->
     		<foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
     		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
     		<dct:modified></dct:modified>
     	</dcat:Catalog>
     	
+	<!-- Document class -->
     	<foaf:Document rdf:about="#cataloghome">
     	    <!-- ??? -->
     	</foaf:Document>
     	
+	<!-- Agent class -->
     	<foaf:Agent rdf:about="#mydatapublisher">
     	    <!-- DCAT_AP specs -->
     	    <dct:type rdf:resource="foaf:Person"></dct:type>
@@ -52,16 +61,19 @@
     		<dct:identifier rdf:resource=""></dct:identifier>
     	</foaf:Agent>
     	
+	<!-- Person class -->
     	<foaf:Person rdf:about="#me">
     		<foaf:fn>ciccio di nonna papera</foaf:fn>
     		<vcard:hasEmail>mailto:ciccio@nonnapapera.it</vcard:hasEmail>    	    
     	</foaf:Person>
     	
+	<!-- Identifier class -->
     	<!-- DCAT_AP-it specs -->
     	<adms:Identifier rdf:about="#myidentify">
     	    <!-- ??? -->
     	</adms:Identifier>
     	
+	<!-- Organization class -->
     	<!-- DCAT_AP-it specs -->
     	<vcard:Organization rdf:about="#myorganization">
     	    <vcard:hasTelephone rdf:resource="#myphone"></vcard:hasTelephone>
@@ -70,11 +82,13 @@
     		<vcard:kind rdf:resource="#mykind"></vcard:kind>
     	</vcard:Organization>
     	
+	<!-- Kind class -->
     	<!-- DCAT_AP specs -->
     	<vcard:Kind rdf:about="#mykind">
     	    <!-- ??? -->
     	</vcard:Kind>
     	
+	<!-- Concept class -->
     	<skos:Concept rdf:about="#myconcept">
     	    <!-- DCAT_AP-it specs -->
     	    <skos:prefLabel>String</skos:prefLabel>
@@ -84,12 +98,14 @@
     	    <skos:prefLabel>String</skos:prefLabel>
     	</skos:Concept>
     	
+	<!-- PeriodOfTime class -->
     	<dct:PeriodOfTime rdf:about="#mypot">
     	    <!-- DCAT_AP-it specs -->
     	    <schema:startDate type="xsd:datetime"></schema:startDate>
     	    <schema:endDate type="xsd:datetime"></schema:endDate>
     	</dct:PeriodOfTime>
     	
+	<!-- Location class -->
     	<dct:Location rdf:about="#mylocation">
     	    <!-- DCAT_AP-it specs -->
     	    <locn:geographicalIdentifier rdf:resource=""></locn:geographicalIdentifier>
@@ -97,6 +113,7 @@
     		<locn:geometry rdf:resource="#mylocationgeomtery"></locn:geometry>
     	</dct:Location>
     	
+	<!-- Geometry class -->
     	<locn:Geometry rdf:about="#mylocationgeometry">
     	    <!-- DCAT_AP-it specs -->
     	    <!--<crs:CRSIdentifier>WSG84</crs:CRSIdentifier>-->
@@ -104,11 +121,13 @@
   			<!--<geometryType:GeometryType></geometryType:GeometryType>-->
     	</locn:Geometry>
     	
+	<!-- Phone class -->
     	<vcard:Phone rdf:about="#myphone">
     	    <!-- DCAT_AP-it specs -->
     	    <vcard:value>+3923232323</vcard:value>
     	</vcard:Phone>
     	
+	<!-- LicenseDocument class -->
     	<dct:LicenseDocument rdf:about="#mylicense">
     	    <!-- DCAT_AP-it specs -->
     	    <dct:identifier rdf:resource="ccuri"></dct:identifier>
@@ -117,6 +136,7 @@
     	    <owl:versioninfo>3.0</owl:versioninfo>
     	</dct:LicenseDocument>
     	
+	<!-- Frequency classes -->
     	<dct:Frequency rdf:about="#semestral">
     	</dct:Frequency>
     	<dct:Frequency rdf:about="#annual">
@@ -124,12 +144,13 @@
     	<dct:Frequency rdf:about="#realtime">
     	</dct:Frequency>
     	
-    	
+    	<!-- general Resource class -->
     	<rdfs:Resource rdf:about="#mydistroresource">
     	    <!-- DCAT_AP-it specs -->
             <dc:source rdf:resource="file://played_2017-04-04_18"/>
         </rdfs:Resource>
     	
+	<!-- MediaTypeOrExtent classes -->
     	<dct:MediaTypeOrExtent rdf:about="#firstmediatype">
     	    <!-- DCAT_AP specs -->
     	    <!-- ??? -->
@@ -140,7 +161,7 @@
     	</dct:MediaTypeOrExtent>
     	
     	<!-- first dataset and embed distros -->
-    	
+    	<!-- Dataset classes -->
     	<dcat:Dataset rdf:about="#datasetitem1">
     	    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type> 
     	    <dct:title >myfirstdataset</dct:title>
@@ -154,36 +175,39 @@
     		<dct:license rdf:resource="#mylicense"/>
     		<dcat:landingPage>http://localhost:8090/opendata/myfirstdataset.html</dcat:landingPage>
     		<dcat:distribution>
+			<!-- Distribution class -->
     			<dcat:Distribution>
-                    <!-- DCAT_AP -->
-                    <dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
-                    <dct:description>my distro is the best</dct:description>
-    		        <dct:license rdf:resource="#mylicense"></dct:license>
-    		        <dct:format rdf:resource="#firstmediatype"></dct:format>
-    		        <dcat:byteSyze>1024</dcat:byteSyze>
-                    <!-- DCAT_AP-it -->
-    		        <dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
-                    <dct:title type="xsd:string">datasetdistro1</dct:title>
-    		        <dct:modified type="xsd:datetime"></dct:modified>
-                </dcat:Distribution>
-            <dcat:distribution>
-                <dcat:Distribution>
-                    <!-- DCAT_AP -->
-                    <dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
-                    <dct:description>my distro is the best</dct:description>
+                    		<!-- DCAT_AP -->
+                    		<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
+                    		<dct:description>my distro is the best</dct:description>
+    		        	<dct:license rdf:resource="#mylicense"></dct:license>
+    		        	<dct:format rdf:resource="#firstmediatype"></dct:format>
+    		        	<dcat:byteSyze>1024</dcat:byteSyze>
+                    		<!-- DCAT_AP-it -->
+    		        	<dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
+                    		<dct:title type="xsd:string">datasetdistro1</dct:title>
+    		        	<dct:modified type="xsd:datetime"></dct:modified>
+                	</dcat:Distribution>
+            	</dcat:distribution>
+                <dcat:distribution>
+			<!-- Distribution class -->
+			<dcat:Distribution>
+                	<!-- DCAT_AP -->
+                    	<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
+                    	<dct:description>my distro is the best</dct:description>
     		        <dct:license rdf:resource="#mylicense"></dct:license>
     		        <dct:format rdf:resource="#secondmediatype"></dct:format>
     		        <dcat:byteSyze>1024</dcat:byteSyze>
-                    <!-- DCAT_AP-it -->
+                    	<!-- DCAT_AP-it -->
     		        <dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
     		        <dct:title type="xsd:string">datasetdistro1</dct:title>
     		        <dct:modified type="xsd:datetime"></dct:modified>
                 </dcat:Distribution>
-   			</dcat:distribution> 
+   	</dcat:distribution> 
     	</dcat:Dataset>
     	
     	<!-- second dataset separated distros class-->
-    	
+    	<!-- Dataset class -->
     	<dcat:Dataset rdf:about="#datasetitem2">
     	    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type> 
             <dct:title type="xsd:string">myseconddataset</dct:title>
@@ -199,7 +223,8 @@
             <dcat:distribution rdf:resource="#thebestdistro"/>
             <dcat:distribution rdf:resource="#theworstdistro"/>
         </dcat:Dataset>
-
+	
+	<!-- Distribution class -->
         <dcat:Distribution rdf:about="#theworstdistro">
             <dct:title>dataset2distro2</dct:title>
             <dcat:mediaType>application/xml</dcat:mediaType>
@@ -207,7 +232,8 @@
             <dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.json"></dcat:accessURL>
             <dcat:byteSyze>1024</dcat:byteSyze>
         </dcat:Distribution>
-
+	
+	<!-- Distribution class -->
         <dcat:Distribution rdf:about="#thebestdistro">
             <dct:title>dataset2distro1</dct:title>
             <dcat:mediaType>application/xml</dcat:mediaType>
