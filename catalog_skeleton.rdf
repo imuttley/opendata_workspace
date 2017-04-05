@@ -49,13 +49,13 @@
     	
 	<!-- Document class -->
     	<foaf:Document rdf:about="#cataloghome">
-    	    <!-- ??? -->
+    	    	<dc:source rdf:resource="http://mybesthomepageever.html"/>
     	</foaf:Document>
     	
 	<!-- Agent class -->
     	<foaf:Agent rdf:about="#mydatapublisher">
-    	    <!-- DCAT_AP specs -->
-    	    <dct:type rdf:resource="foaf:Person"></dct:type>
+    	    	<!-- DCAT_AP specs -->
+    	    	<dct:type rdf:resource="foaf:Person"></dct:type>
     		<foaf:name>Agenzia di ciccio di nonna papera</foaf:name>    
     		<!-- DCAT_AP-it specs -->
     		<dct:identifier rdf:resource="#myidentify"></dct:identifier>
@@ -70,14 +70,14 @@
 	<!-- Identifier class -->
     	<!-- DCAT_AP-it specs -->
     	<adms:Identifier rdf:about="#myidentify">
-    	    <!-- ??? -->
+    	    	<!-- ??? -->
     	</adms:Identifier>
     	
 	<!-- Organization class -->
     	<!-- DCAT_AP-it specs -->
     	<vcard:Organization rdf:about="#myorganization">
-    	    <vcard:hasTelephone rdf:resource="#myphone"></vcard:hasTelephone>
-    	    <foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
+    	    	<vcard:hasTelephone rdf:resource="#myphone"></vcard:hasTelephone>
+    	    	<foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
     		<vcard:hasEmail rdf:resource="#myemail"></vcard:hasEmail>
     		<vcard:kind rdf:resource="#mykind"></vcard:kind>
     	</vcard:Organization>
@@ -85,55 +85,55 @@
 	<!-- Kind class -->
     	<!-- DCAT_AP specs -->
     	<vcard:Kind rdf:about="#mykind">
-    	    <!-- ??? -->
+    	    	<!-- ??? -->
     	</vcard:Kind>
     	
 	<!-- Concept class -->
     	<skos:Concept rdf:about="#myconcept">
-    	    <!-- DCAT_AP-it specs -->
-    	    <skos:prefLabel>String</skos:prefLabel>
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<skos:prefLabel>String</skos:prefLabel>
     	</skos:Concept>
     	<skos:Concept rdf:about="#mygeoconcept">
     		<!-- DCAT_AP-it specs -->
-    	    <skos:prefLabel>String</skos:prefLabel>
+    	    	<skos:prefLabel>String</skos:prefLabel>
     	</skos:Concept>
     	
 	<!-- PeriodOfTime class -->
     	<dct:PeriodOfTime rdf:about="#mypot">
-    	    <!-- DCAT_AP-it specs -->
-    	    <schema:startDate type="xsd:datetime"></schema:startDate>
-    	    <schema:endDate type="xsd:datetime"></schema:endDate>
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<schema:startDate type="xsd:datetime"></schema:startDate>
+    	    	<schema:endDate type="xsd:datetime"></schema:endDate>
     	</dct:PeriodOfTime>
     	
 	<!-- Location class -->
     	<dct:Location rdf:about="#mylocation">
-    	    <!-- DCAT_AP-it specs -->
-    	    <locn:geographicalIdentifier rdf:resource=""></locn:geographicalIdentifier>
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<locn:geographicalIdentifier rdf:resource=""></locn:geographicalIdentifier>
     		<locn:geographicName rdf:resource="#mygeoconcept"></locn:geographicName>
     		<locn:geometry rdf:resource="#mylocationgeomtery"></locn:geometry>
     	</dct:Location>
     	
 	<!-- Geometry class -->
     	<locn:Geometry rdf:about="#mylocationgeometry">
-    	    <!-- DCAT_AP-it specs -->
-    	    <!--<crs:CRSIdentifier>WSG84</crs:CRSIdentifier>-->
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<!--<crs:CRSIdentifier>WSG84</crs:CRSIdentifier>-->
     		<!--<coordinates:CoordinateList></coordinates:CoordinateList>-->
-  			<!--<geometryType:GeometryType></geometryType:GeometryType>-->
+  		<!--<geometryType:GeometryType></geometryType:GeometryType>-->
     	</locn:Geometry>
     	
 	<!-- Phone class -->
     	<vcard:Phone rdf:about="#myphone">
-    	    <!-- DCAT_AP-it specs -->
-    	    <vcard:value>+3923232323</vcard:value>
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<vcard:value>+3923232323</vcard:value>
     	</vcard:Phone>
     	
 	<!-- LicenseDocument class -->
     	<dct:LicenseDocument rdf:about="#mylicense">
-    	    <!-- DCAT_AP-it specs -->
-    	    <dct:identifier rdf:resource="ccuri"></dct:identifier>
-    	    <dct:type>license type</dct:type>
-    	    <foaf:name>license name</foaf:name>
-    	    <owl:versioninfo>3.0</owl:versioninfo>
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<dct:identifier rdf:resource="ccuri"></dct:identifier>
+    	    	<dct:type>license type</dct:type>
+    	    	<foaf:name>license name</foaf:name>
+    	    	<owl:versioninfo>3.0</owl:versioninfo>
     	</dct:LicenseDocument>
     	
 	<!-- Frequency classes -->
@@ -146,26 +146,26 @@
     	
     	<!-- general Resource class -->
     	<rdfs:Resource rdf:about="#mydistroresource">
-    	    <!-- DCAT_AP-it specs -->
-            <dc:source rdf:resource="file://played_2017-04-04_18"/>
+    	    	<!-- DCAT_AP-it specs -->
+            	<dc:source rdf:resource="file://played_2017-04-04_18"/>
         </rdfs:Resource>
     	
 	<!-- MediaTypeOrExtent classes -->
     	<dct:MediaTypeOrExtent rdf:about="#firstmediatype">
-    	    <!-- DCAT_AP specs -->
-    	    <!-- ??? -->
+    	    	<!-- DCAT_AP specs -->
+    	    	<!-- ??? -->
     	</dct:MediaTypeOrExtent>
     	<dct:MediaTypeOrExtent rdf:about="#secondmediatype">
-    	    <!-- DCAT_AP specs -->
-    	    <!-- ??? -->
+    	    	<!-- DCAT_AP specs -->
+    	    	<!-- ??? -->
     	</dct:MediaTypeOrExtent>
     	
     	<!-- first dataset and embed distros -->
     	<!-- Dataset classes -->
     	<dcat:Dataset rdf:about="#datasetitem1">
-    	    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type> 
-    	    <dct:title >myfirstdataset</dct:title>
-    	    <dct:description >ciao</dct:description>
+    	    	<!-- unecessary <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type>--> 
+    	    	<dct:title >myfirstdataset</dct:title>
+    	    	<dct:description >ciao</dct:description>
     		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
     		<dct:identifier rdf:resource="#myidentify"></dct:identifier>
     		<dcat:keyword>test</dcat:keyword>
@@ -209,9 +209,9 @@
     	<!-- second dataset separated distros class-->
     	<!-- Dataset class -->
     	<dcat:Dataset rdf:about="#datasetitem2">
-    	    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type> 
-            <dct:title type="xsd:string">myseconddataset</dct:title>
-    	    <dct:description>ciao</dct:description>
+    	    	<!-- unnecessary <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"></rdf:type>--> 
+            	<dct:title type="xsd:string">myseconddataset</dct:title>
+    	    	<dct:description>ciao</dct:description>
     		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
     		<dct:identifier>999</dct:identifier>
     		<dcat:keyword>test</dcat:keyword>
@@ -219,27 +219,27 @@
     		<dct:publisher href="#agent"/>
     		<dct:language>en-EN</dct:language>
     		<dct:license href="#mylicense"/>
-            <dcat:landingPage rdf:resource="http://localhost:8090/opendata/myseconddataset.html"></dcat:landingPage>
-            <dcat:distribution rdf:resource="#thebestdistro"/>
-            <dcat:distribution rdf:resource="#theworstdistro"/>
+            	<dcat:landingPage rdf:resource="http://localhost:8090/opendata/myseconddataset.html"></dcat:landingPage>
+            	<dcat:distribution rdf:resource="#thebestdistro"/>
+            	<dcat:distribution rdf:resource="#theworstdistro"/>
         </dcat:Dataset>
 	
 	<!-- Distribution class -->
         <dcat:Distribution rdf:about="#theworstdistro">
-            <dct:title>dataset2distro2</dct:title>
-            <dcat:mediaType>application/xml</dcat:mediaType>
-            <dct:format>json</dct:format>
-            <dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.json"></dcat:accessURL>
-            <dcat:byteSyze>1024</dcat:byteSyze>
+            	<dct:title>dataset2distro2</dct:title>
+            	<dcat:mediaType>application/xml</dcat:mediaType>
+            	<dct:format>json</dct:format>
+            	<dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.json"></dcat:accessURL>
+            	<dcat:byteSyze>1024</dcat:byteSyze>
         </dcat:Distribution>
 	
 	<!-- Distribution class -->
         <dcat:Distribution rdf:about="#thebestdistro">
-            <dct:title>dataset2distro1</dct:title>
-            <dcat:mediaType>application/xml</dcat:mediaType>
-            <dct:format>xml</dct:format>
-            <dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.xml"></dcat:accessURL>
-            <dcat:byteSyze>1024</dcat:byteSyze>
+            	<dct:title>dataset2distro1</dct:title>
+            	<dcat:mediaType>application/xml</dcat:mediaType>
+            	<dct:format>xml</dct:format>
+            	<dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.xml"></dcat:accessURL>
+            	<dcat:byteSyze>1024</dcat:byteSyze>
         </dcat:Distribution>
 
 
