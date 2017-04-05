@@ -26,8 +26,8 @@
 		<!-- or -->
 		<!-- <rdf:Description rdf:ID="myfirstcatalog"> -->
 		<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> -->
-    	    <dcat:contactPoint rdf:resource="#me"></dcat:contactPoint> 
-    	    <dct:language>en-EN</dct:language>
+    	    	<dcat:contactPoint rdf:resource="#me"></dcat:contactPoint> 
+		<dct:language>en-EN</dct:language>
     		<dct:license>CC 4.0</dct:license>
     		<dcat:themeTaxonomy>
     			<skos:ConceptScheme />
@@ -44,7 +44,7 @@
 		<!-- DCAT_AP-it specs -->
     		<foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
     		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
-    		<dct:modified></dct:modified>
+    		<dct:modified type="xsd:datetime">2017-04-05T10:40</dct:modified>
     	</dcat:Catalog>
     	
 	<!-- Document class -->
@@ -58,7 +58,7 @@
     	    <dct:type rdf:resource="foaf:Person"></dct:type>
     		<foaf:name>Agenzia di ciccio di nonna papera</foaf:name>    
     		<!-- DCAT_AP-it specs -->
-    		<dct:identifier rdf:resource=""></dct:identifier>
+    		<dct:identifier rdf:resource="#myidentify"></dct:identifier>
     	</foaf:Agent>
     	
 	<!-- Person class -->
