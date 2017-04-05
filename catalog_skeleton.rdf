@@ -11,8 +11,8 @@
 <!-- -->
 
 <!-- standard namespaces declaration -->
-<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" 
-    	xmlns:dcatit="http://dati.gov.it/onto/dcatapit#"
+<rdf:RDF xmlns:dcatap="http://www.w3.org/ns/dcat#" 
+    	xmlns:dcat="http://dati.gov.it/onto/dcatapit#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     	xmlns:skos="http://wwww.w3.org/2004/02/skos/core#"
