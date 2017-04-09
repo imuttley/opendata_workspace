@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+<!-- monolithic Cataolg skeleton for DCAP_AP-it with Dataset and Distribution -->
+
+<!-- DCAT base vocabulary https://www.w3.org/TR/vocab-dcat/ -->
+<!-- -->
+<!-- DCAT_AP SC118DI07171 DCAT Application Profile for data portals in Europe version 1.1 -->
+<!-- vocabulary http://joinup.ec.europa.eu/site/core_vocabularies/registry/dcat-ap/ -->
+<!--  -->
+<!-- DCAT_AP-it vocabulary http://www.dati.gov.it/onto/DCAT-AP_IT.owl --> 
+<!-- -->
+
+<!-- standard namespaces declaration -->
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" 
+    	xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    	xmlns:dc="http://purl.org/dc/elements/1.1/"
+    	xmlns:ex="http://example.org/stuff/1.0/"
+		xmlns:dct="http://purl.org/dc/terms/"
+    	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    	xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+    	xmlns:adms="http://www.w3.org/ns/adms#"
+    	xmlns:schema="http://schema.org/"
+    	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    	xmlns:locn="http://www.w3.org/ns/locn#"
+    	xmlns:owl="http://www.w3.org/2002/07/owl#"
+    	xmlns:cld="http://purl.org/cld/terms/"
+    	xmlns:freq="http://purl.org/cld/freq/">
+    	
+	<!-- Catalog class -->
+    	<dcat:Catalog rdf:about="#myfirstcatalog">
+		<!-- equivalet to -->
+		<!-- <rdf:Description rdf:about="#myfirstcatalog"> -->
+		<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> --> 
+		<!-- or -->
+		<!-- <rdf:Description rdf:ID="myfirstcatalog"> -->
+		<!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/> -->
+    	    	<dcat:contactPoint rdf:resource="#me"></dcat:contactPoint> 
+		<dct:language>en-EN</dct:language>
+    		<dcat:themeTaxonomy rdf:resource="#myconceptscheme"></dcat:themeTaxonomy>
+    		
+		<!-- DCAT_AP specs -->
+    		<dct:title>myfirstdata</dct:title>
+    		<dct:publisher rdf:resource="#mydatapublisher"></dct:publisher>
+    		<dct:description>ciao</dct:description> 	
+    		<dct:license rdf:resource="#mylicense"></dct:license>
+		<dcat:dataset rdf:resource="#datasetitem1"></dcat:dataset>
+    		<dcat:dataset rdf:resource="#datasetitem2"></dcat:dataset>
+    		<!-- <dcat:dataset rdf:resource="#datasetitem3"></dcat:dataset> -->
+    		
+		<!-- DCAT_AP-it specs -->
+    		<foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
+    		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
+    		<dct:modified type="xsd:datetime">2017-04-05T10:40:10</dct:modified>
+    	</dcat:Catalog>
+    	
+	<!-- Document class -->
+    	<foaf:Document rdf:about="#cataloghome">
+    	    	<dc:source rdf:resource="http://mybesthomepageever.html"/>
+    	</foaf:Document>
+    	
+	<!-- Agent class -->
+    	<foaf:Agent rdf:about="#mydatapublisher">
+    	    	<!-- DCAT_AP specs -->
+    	    	<dct:type rdf:resource="foaf:Person"></dct:type>
+    		<foaf:name>Agenzia di ciccio di nonna papera</foaf:name>    
+    		<!-- DCAT_AP-it specs -->
+    		<dct:identifier rdf:resource="#myidentify"></dct:identifier>
+    	</foaf:Agent>
+    	
+	<!-- Person class -->
+    	<foaf:Person rdf:about="#me">
+    		<foaf:fn>ciccio di nonna papera</foaf:fn>
+    		<vcard:hasEmail>mailto:ciccio@nonnapapera.it</vcard:hasEmail>    	    
+    	</foaf:Person>
+    	
+	<!-- Identifier class -->
+    	<!-- DCAT_AP-it specs -->
+    	<adms:Identifier rdf:about="#myidentify">
+    	    	<skos:notation>identity notation</skos:notation><!-- ??? -->
+    	</adms:Identifier>
+    	
+	<!-- Organization class -->
+    	<!-- DCAT_AP-it specs -->
+    	<vcard:Organization rdf:about="#myorganization">
+    	    	<vcard:hasTelephone rdf:resource="#myphone"></vcard:hasTelephone>
+    	    	<foaf:homepage rdf:resource="#cataloghome"></foaf:homepage>
+    		<vcard:hasEmail rdf:resource="#myemail"></vcard:hasEmail>
+    		<vcard:kind rdf:resource="#mykind"></vcard:kind>
+    	</vcard:Organization>
+    	
+	<!-- Kind class -->
+    	<!-- DCAT_AP specs -->
+    	<vcard:Kind rdf:about="#mycontactpoint">
+    	    	<!-- ??? -->
+    	</vcard:Kind>
+    	
+	<!-- Concept class -->
+	<skos:ConceptScheme rdf:about="#myconceptscheme">
+		<dct:title>simple concept</dct:title>
+	</skos:ConceptScheme>
+    	<skos:Concept rdf:about="#myconcept">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<skos:prefLabel>String</skos:prefLabel>
+    	</skos:Concept>
+    	<skos:Concept rdf:about="#mygeoconcept">
+    		<!-- DCAT_AP-it specs -->
+    	    	<skos:prefLabel>String</skos:prefLabel>
+    	</skos:Concept>
+    	
+	<!-- PeriodOfTime class -->
+    	<dct:PeriodOfTime rdf:about="#mypot">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<schema:startDate type="xsd:datetime" >2017-04-06T08:00:00</schema:startDate>
+    	    	<schema:endDate type="xsd:datetime">2017-04-06T11:11:11</schema:endDate>
+    	</dct:PeriodOfTime>
+    	
+	<!-- Location class -->
+    	<dct:Location rdf:about="#mylocation">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<locn:geographicalIdentifier rdf:resource=""></locn:geographicalIdentifier>
+    		<locn:geographicName rdf:resource="#mygeoconcept"></locn:geographicName>
+    		<locn:geometry rdf:resource="#mylocationgeomtery"></locn:geometry>
+    	</dct:Location>
+    	
+	<!-- Geometry class -->
+    	<locn:Geometry rdf:about="#mylocationgeometry">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<!--<crs:CRSIdentifier>WSG84</crs:CRSIdentifier>-->
+    		<!--<coordinates:CoordinateList></coordinates:CoordinateList>-->
+  		<!--<geometryType:GeometryType></geometryType:GeometryType>-->
+    	</locn:Geometry>
+    	
+	<!-- Phone class -->
+    	<vcard:Phone rdf:about="#myphone">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<vcard:value>+3923232323</vcard:value>
+    	</vcard:Phone>
+    	
+	<!-- LicenseDocument class -->
+    	<dct:LicenseDocument rdf:about="#mylicense">
+    	    	<!-- DCAT_AP-it specs -->
+    	    	<dct:identifier rdf:resource="ccuri"></dct:identifier>
+    	    	<dct:type rdf:resource="#myconcept"></dct:type>
+    	    	<foaf:name>license name</foaf:name>
+    	    	<owl:versioninfo>3.0</owl:versioninfo>
+    	</dct:LicenseDocument>
+    	
+	<!-- Frequency classes 
+    	<dct:Frequency rdf:about="#semestral">
+    	</dct:Frequency>
+    	<dct:Frequency rdf:about="#annual">
+    	</dct:Frequency>
+    	<dct:Frequency rdf:about="#realtime">
+    	</dct:Frequency>-->
+    	
+    	<!-- general Resource class -->
+    	<rdfs:Resource rdf:about="#mydistroresource">
+    	    	<!-- DCAT_AP-it specs -->
+            	<dc:source rdf:resource="file://played_2017-04-04_18"/>
+        </rdfs:Resource>
+    	
+	<!-- MediaTypeOrExtent classes -->
+    	<dct:MediaTypeOrExtent rdf:about="#firstmediatype">
+    	    	<!-- DCAT_AP specs -->
+    	    	<!-- ??? -->
+    	</dct:MediaTypeOrExtent>
+    	<dct:MediaTypeOrExtent rdf:about="#secondmediatype">
+    	    	<!-- DCAT_AP specs -->
+    	    	<!-- ??? -->
+    	</dct:MediaTypeOrExtent>
+    	
+    	<!-- first dataset and embed distros -->
+    	<!-- Dataset classes -->
+    	<dcat:Dataset rdf:about="#datasetitem1">
+    	    <dct:title >myfirstdataset</dct:title>
+    	    <dct:description >ciao</dct:description>
+		<dcat:theme>test theme 1</dcat:theme>
+		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>   
+ 		<dct:issued type="xsd:datetime" >2017-04-01T15:00:00</dct:issued>
+    		<dct:identifier >literal identifier 123</dct:identifier>
+    		<dcat:keyword>test</dcat:keyword>
+    		<dct:modified type="xsd:datetime">2017-04-01T15:00:00</dct:modified>
+    		<dct:publisher rdf:resource="#agent"/>
+    		<dct:language>en-EN</dct:language>
+    		<dct:license rdf:resource="#mylicense"/>
+    		<dcat:landingPage>http://localhost:8090/opendata/myfirstdataset.html</dcat:landingPage>
+			<dcat:accrualPeriodicity rdf:resource="freq:monthly"></dcat:accrualPeriodicity>
+    		<dcat:distribution>
+			<!-- Distribution class -->
+    			<dcat:Distribution>
+                    		<!-- DCAT_AP -->
+                    		<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
+                    		<dct:description>my distro is the best</dct:description>
+    		        		<dct:license rdf:resource="#mylicense"></dct:license>
+    		        		<dct:format rdf:resource="#firstmediatype"></dct:format>
+    		        		<dcat:byteSyze>1024</dcat:byteSyze>
+                    		<!-- DCAT_AP-it -->
+    		        		<dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
+                    		<dct:title >datasetdistro1</dct:title>
+    		        		<dct:modified type="xsd:datetime">2017-04-06T09:22:10</dct:modified>
+                			
+                	</dcat:Distribution>
+            	</dcat:distribution>
+                <dcat:distribution>
+				<!-- Distribution class -->
+					<dcat:Distribution>
+                		<!-- DCAT_AP -->
+                    	<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
+                    	<dct:description>my distro is the best</dct:description>
+    		        	<dct:license rdf:resource="#mylicense"></dct:license>
+    		        	<dct:format rdf:resource="#secondmediatype"></dct:format>
+    		        	<dcat:byteSyze>1024</dcat:byteSyze>
+                    		<!-- DCAT_AP-it -->
+    		        	<dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
+    		        	<dct:title >datasetdistro1</dct:title>
+    		        	<dct:modified type="xsd:datetime">2017-04-06T09:00:21</dct:modified>
+                	</dcat:Distribution>
+   			</dcat:distribution> 
+    	</dcat:Dataset>
+    	
+    	<!-- second dataset separated distros class-->
+    	<!-- Dataset class -->
+    	<dcat:Dataset rdf:about="#datasetitem2">
+    	    <dct:title >myseconddataset</dct:title>
+    	    <dct:description>ciao</dct:description>
+		<dcat:theme>test theme 2</dcat:theme>
+		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>
+    		<dct:issued type="xsd:datetime" >2017-04-01T15:00:00</dct:issued>
+    		<dct:identifier>999</dct:identifier>
+    		<dcat:keyword>test</dcat:keyword>
+    		<dct:modified type="xsd:datetime">2017-04-01T15:00:00</dct:modified>
+    		<dct:publisher rdf:resource="#agent"/>
+    		<dct:language>en-EN</dct:language>
+    		<dct:license rdf:resource="#mylicense"/>
+            	<dcat:landingPage rdf:resource="http://localhost:8090/opendata/myseconddataset.html"></dcat:landingPage>
+            	<dcat:distribution rdf:resource="#thebestdistro"/>
+            	<dcat:distribution rdf:resource="#theworstdistro"/>
+        </dcat:Dataset>
+    	
+	<!-- Distribution class -->
+        <dcat:Distribution rdf:about="#theworstdistro">
+            	<dct:title>dataset2distro2</dct:title>
+            	<dct:description>secondbestdistro</dct:description>
+		<dct:license rdf:resource="#mylicense"></dct:license>
+		<dcat:mediaType>application/xml</dcat:mediaType>
+            	<dct:format>json</dct:format>
+            	<dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.json"></dcat:accessURL>
+            	<dcat:byteSyze>1024</dcat:byteSyze>
+        </dcat:Distribution>
+	
+	<!-- Distribution class -->
+        <dcat:Distribution rdf:about="#thebestdistro">
+            	<dct:title>dataset2distro1</dct:title>
+		<dct:description>firstbestdistro</dct:description>
+		<dct:license rdf:resource="#mylicense"></dct:license>
+            	<dcat:mediaType>application/xml</dcat:mediaType>
+            	<dct:format>xml</dct:format>
+            	<dcat:accessURL rdf:resource="http://localhost:8090/opendata/myseconddataset.xml"></dcat:accessURL>
+            	<dcat:byteSyze>1024</dcat:byteSyze>
+        </dcat:Distribution>
+
+        <!-- third aggregated dataset with ws -->
+        <dcat:Dataset rdf:about="#aggregateddataset">
+    	    	<dct:title >my aggregate dataset</dct:title>
+    	    	<dct:description>ciao</dct:description>
+		<dcat:theme>test theme aggregate</dcat:theme>
+		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>    	
+		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
+    		<dct:identifier>9991</dct:identifier>
+    		<dcat:keyword>test of aggregation</dcat:keyword>
+    		<dct:modified type="xsd:datetime">2017-04-01T15:00:00</dct:modified>
+    		<dct:publisher rdf:resource="#agent"/>
+    		<dct:language>en-EN</dct:language>
+    		<dct:license rdf:resource="#mylicense"/>
+            	<!-- landing page resource for linkeddata catalog of aggregation of datas described for catalog#dataset1 and catalog#dataset2 -->
+            	<dcat:landingPage rdf:resource="http://localhost:8191/opendata/aggregate?op=sum;a=ds1;b=ds2"></dcat:landingPage>
+            	<!-- distributions for aggregation of datasets -->
+            	<dcat:distribution rdf:resource="#thebestaggregatedistro"/>
+            	<dcat:distribution rdf:resource="#theworstaggregatedistro"/>
+        </dcat:Dataset>
+	
+        <!-- forth stream dataset  -->
+        <dcat:Dataset rdf:about="#streamdataset">
+    	    	<dct:title >my aggregate dataset</dct:title>
+    	    	<dct:description>ciao</dct:description>
+    		<dcat:theme>test theme stream</dcat:theme>
+		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>
+		<dct:issued type="xsd:datetime">2017-04-01T15:00:00</dct:issued>
+    		<dct:identifier>9992</dct:identifier>
+    		<dcat:keyword>test of aggregation</dcat:keyword>
+    		<dct:modified type="xsd:datetime">2017-04-01T15:00:00</dct:modified>
+    		<dct:publisher rdf:resource="#agent"/>
+    		<dct:language>en-EN</dct:language>
+    		<dct:license rdf:resource="#mylicense"/>
+            	<!-- landing page resource for linkeddata catalog of aggregation of datas described for catalog#dataset1 and catalog#dataset2 -->
+            	<dcat:landingPage rdf:resource="http://localhost:8192/opendata/streams/catalog"></dcat:landingPage>
+            	<!-- distributions for streams of datasets -->
+            	<dcat:distribution rdf:resource="#thebeststreamdistro"/>
+            	<dcat:distribution rdf:resource="#theworststreamdistro"/>
+        </dcat:Dataset>	
+
+</rdf:RDF>
