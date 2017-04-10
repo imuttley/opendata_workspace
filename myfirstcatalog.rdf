@@ -13,12 +13,12 @@
 <!-- standard namespaces declaration -->
 <rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" 
     	xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
-		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     	xmlns:dc="http://purl.org/dc/elements/1.1/"
     	xmlns:ex="http://example.org/stuff/1.0/"
-		xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dct="http://purl.org/dc/terms/"
     	xmlns:foaf="http://xmlns.com/foaf/0.1/"
     	xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     	xmlns:adms="http://www.w3.org/ns/adms#"
@@ -175,8 +175,8 @@
     	<!-- first dataset and embed distros -->
     	<!-- Dataset classes -->
     	<dcat:Dataset rdf:about="#datasetitem1">
-    	    <dct:title >myfirstdataset</dct:title>
-    	    <dct:description >ciao</dct:description>
+    	    	<dct:title >myfirstdataset</dct:title>
+    	    	<dct:description >ciao</dct:description>
 		<dcat:theme>test theme 1</dcat:theme>
 		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>   
  		<dct:issued type="xsd:datetime" >2017-04-01T15:00:00</dct:issued>
@@ -187,29 +187,29 @@
     		<dct:language>en-EN</dct:language>
     		<dct:license rdf:resource="#mylicense"/>
     		<dcat:landingPage>http://localhost:8090/opendata/myfirstdataset.html</dcat:landingPage>
-			<dcat:accrualPeriodicity rdf:resource="freq:monthly"></dcat:accrualPeriodicity>
+		<dcat:accrualPeriodicity rdf:resource="freq:monthly"></dcat:accrualPeriodicity>
     		<dcat:distribution>
 			<!-- Distribution class -->
     			<dcat:Distribution>
                     		<!-- DCAT_AP -->
                     		<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
                     		<dct:description>my distro is the best</dct:description>
-    		        		<dct:license rdf:resource="#mylicense"></dct:license>
-    		        		<dct:format rdf:resource="#firstmediatype"></dct:format>
-    		        		<dcat:byteSyze>1024</dcat:byteSyze>
+    		        	<dct:license rdf:resource="#mylicense"></dct:license>
+    		        	<dct:format rdf:resource="#firstmediatype"></dct:format>
+    		        	<dcat:byteSyze>1024</dcat:byteSyze>
                     		<!-- DCAT_AP-it -->
-    		        		<dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
+    		        	<dcat:downloadURL rdf:resource="#mydistroresource"></dcat:downloadURL>
                     		<dct:title >datasetdistro1</dct:title>
-    		        		<dct:modified type="xsd:datetime">2017-04-06T09:22:10</dct:modified>
-                			
+    		        	<dct:modified type="xsd:datetime">2017-04-06T09:22:10</dct:modified>
+       	
                 	</dcat:Distribution>
             	</dcat:distribution>
                 <dcat:distribution>
 				<!-- Distribution class -->
-					<dcat:Distribution>
+			<dcat:Distribution>
                 		<!-- DCAT_AP -->
-                    	<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
-                    	<dct:description>my distro is the best</dct:description>
+                    		<dcat:accessURL rdf:resource="#mydistroresource"></dcat:accessURL>
+                    		<dct:description>my distro is the best</dct:description>
     		        	<dct:license rdf:resource="#mylicense"></dct:license>
     		        	<dct:format rdf:resource="#secondmediatype"></dct:format>
     		        	<dcat:byteSyze>1024</dcat:byteSyze>
@@ -218,14 +218,14 @@
     		        	<dct:title >datasetdistro1</dct:title>
     		        	<dct:modified type="xsd:datetime">2017-04-06T09:00:21</dct:modified>
                 	</dcat:Distribution>
-   			</dcat:distribution> 
+   		</dcat:distribution> 
     	</dcat:Dataset>
     	
     	<!-- second dataset separated distros class-->
     	<!-- Dataset class -->
     	<dcat:Dataset rdf:about="#datasetitem2">
-    	    <dct:title >myseconddataset</dct:title>
-    	    <dct:description>ciao</dct:description>
+    	    	<dct:title >myseconddataset</dct:title>
+    	    	<dct:description>ciao</dct:description>
 		<dcat:theme>test theme 2</dcat:theme>
 		<dcat:contactPoint rdf:resource="#mycontactpoint"></dcat:contactPoint>
     		<dct:issued type="xsd:datetime" >2017-04-01T15:00:00</dct:issued>
