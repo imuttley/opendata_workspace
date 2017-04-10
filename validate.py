@@ -2,7 +2,7 @@
 from rdflib.graph import Graph
 from rdflib.namespace import Namespace,RDFS,RDF,FOAF,XSD,DC,OWL
 import sys,re,os
-from IPython.core.display import display,HTML
+#from IPython.core.display import display,HTML
 
 
 if len(sys.argv)<2: 
